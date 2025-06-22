@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rest Countries</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.0/dist/full.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    };
+  </script>
+</head>
+<body class="bg-base-100 text-base-content transition-all">
+  <div class="navbar bg-base-200 px-4 py-2 flex flex-wrap gap-2">
+    <div class="flex-1">
+      <a class="text-xl font-bold">Where in the world?</a>
+    </div>
+    <div class="flex-none gap-2 flex">
+      <input id="search" type="text" placeholder="Search..." class="input input-bordered" />
+      <select id="regionFilter" class="select select-bordered">
+        <option disabled selected>Filter by Region</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+      <button id="darkToggle" class="btn btn-sm">🌙</button>
+    </div>
+  </div>
+
+  <div id="loading" class="text-center p-4 hidden">
+    <span class="loading loading-spinner loading-lg"></span>
+  </div>
+
+  <div id="countries" class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+ =
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
